@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #A6D785;
+  /* Зеленый фон */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Стили для основного контейнера приложения */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Стили для заголовка */
+h1 {
+  color: #2A2A2A;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Стили для выпадающего списка */
+select {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #2A8D45;
+  border-radius: 8px;
+  background-color: #DFF2E1;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Стили для карточки города */
+.city-card {
+  background-color: #F0F9E7;
+  border: 2px solid #9ACD70;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+/* Стили для заголовка города */
+.city-card h2 {
+  font-size: 28px;
+  color: #2A2A2A;
+  margin-bottom: 15px;
+}
+
+/* Стили для описания города */
+.city-card p {
+  font-size: 18px;
+  color: #4C4C4C;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Стили для изображения города */
+.city-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Стили для списка фактов */
+.city-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  color: #2A2A2A;
 }

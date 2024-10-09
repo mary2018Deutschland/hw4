@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+import citiesData from "./data/data";
+
+import CitySelector from "./components/citySelector/index";
+import CityCard from "./components/cityCard/index";
 
 function App() {
+  const [selectedCity, setSelectedCity] = useState(citiesData[0].name);
+
+  const handleCityChange = (event) => {
+    setSelectedCity(event.target.value);
+  };
+
+  const selectedCityData = citiesData.find(
+    (city) => city.name === selectedCity
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <CitySelector
+        selectedCity={selectedCity}
+        handleCityChange={handleCityChange}
+        cities={citiesData}
+      />
+      <CityCard city={selectedCityData} />
     </div>
   );
 }
